@@ -279,12 +279,6 @@ textarea {
         rgba(0, 0, 0, 0.08) 0 5px 15px 0;
 }
 
-/* .theme--light.application .v-card {
-    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11),
-        0 5px 15px 0 rgba(0, 0, 0, 0.08) !important;
-    color: #102c3c !important;
-} */
-
 .theme--light.v-card,
 .theme--light.v-sheet {
     background-color: var(--lightblue);
