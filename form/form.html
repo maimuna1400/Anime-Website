@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Comment</title>
+</head>
+<header>
+    <!-- HAMBURGER MENU -->
+    <div class="navigation">
+        <button class="hamburger" onclick="show()">
+            <div id="bar1" class="bar"></div>
+            <div id="bar2" class="bar"></div>
+            <div id="bar3" class="bar"></div>
+        </button>
+
+        <nav>
+            <ul>
+                <li><a href="/topAnime/topAnime.html">Top Anime</a></li>
+                <li><a href="/Seasons/current.html">Current</a></li>
+                <li><a href="/Seasons/upcoming.html">Upcoming</a></li>
+                <li><a href="/Characters/character.html">Characters</a></li>
+                <li><a href="form/form.html">Comments</a></li>
+            </ul>
+        </nav>
+
+    </div>
+    <!-- LOGO -->
+    <div class="logo"><a href="/home.html" class="title">AnimeList</a></div>
+</header>
+
+<body>
+    <div class="form_container">
+        <h1>Comment Below</h1>
+        <h2></h2>
+        <form action="submit.php" method="post">
+            <label for="name">Name:</label><br>
+            <input required type="text" id="name" name="name">
+
+            <br><br>
+            <label for="likes">What is you favorite Anime?</label><br>
+            <textarea required type="text" id="likes" name="likes"></textarea>
+            <br><br>
+            <label for="reason">Why do you like this Anime? **No Spoilers Please**</label><br>
+            <textarea required type="text" id="reason" name="reason"></textarea>
+            <br><br>
+            <button class="submit">Submit</button>
+        </form>
+        <br><br>
+        <a href="submissions.php">
+            <h1>Other Comments</h1>
+        </a>
+    </div>
+
+    <!-- <div class="form_result">
+        <h2>Form Data:</h2>
+        <?php include 'fetch_data.php'; ?>
+    </div> -->
+
+
+
+
+
+
+    <div class="comment-container theme--light">
+        <div>
+            <div class="card v-card v-sheet theme--light elevation-2">
+                <div class="header">
+                    <span class="displayName">John</span> <span class="displayName caption">2 days ago</span>
+                </div>
+                <!---->
+                <div class="wrapper comment">
+                    <p>Favorite Anime: Demon Slayer</p>
+                       <p> I just love the animation style of Demon Slayer. You can tell that a lot of work has been put on developing the story of each character as well as designing them.</p>
+                </div>
+                
+            </div>
+        </div>
+        <div>
+            <div class="card v-card v-sheet theme--light elevation-2">
+                <div class="header">
+
+                    <span class="displayName">Deku</span> <span class="displayName caption">15 days
+                        ago</span>
+                </div>
+                <!---->
+                <div class="wrapper comment">
+                    <p>Favorite Anime: Haikyuu!</p>
+                   <p> If you love sports anime/series, then Haikyuu is a MUST watch!!</p>
+                </div>
+                
+
+            </div>
+        </div>
+        <div>
+            <div class="card v-card v-sheet theme--light elevation-2">
+                <div class="header">
+                    <span class="displayName">Lee</span> <span class="displayName caption">2 months ago</span>
+                </div>
+                <!---->
+                <div class="wrapper comment">
+                    <p>Favorite Anime: Naruto!</p>
+                   <p> It's not possible to be a anime fan and not watch Naruto...Come On!!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>

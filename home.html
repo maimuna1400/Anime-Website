@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="carousel/carouselStyle.css"/>
+    
+</head>
+<header>
+    <!-- HAMBURGER MENU -->
+    <div class="navigation">
+      <button class="hamburger" onclick="show()">
+          <div id="bar1" class="bar"></div>
+          <div id="bar2" class="bar"></div>
+          <div id="bar3" class="bar"></div>
+      </button>
+
+      <nav>
+          <ul>
+              <li><a href="topAnime/topAnime.html">Top Anime</a></li>
+              <li><a href="Seasons/current.html">Current</a></li>
+              <li><a href="Seasons/upcoming.html">Upcoming</a></li>
+              <li><a href="Characters/character.html">Characters</a></li>
+              <li><a href="form/form.html">Comments</a></li>
+          </ul>
+      </nav>
+
+  </div>
+    <!-- LOGO -->
+    <div class="logo"><a href="home.html" class="title">AnimeList</a></div>
+  </header>
+<body>
+   <!-- CAROUSEL -->
+    <div class="home_div">
+        <div class="slider">
+            <div id="anime-slider" class="slick-carousel"></div>
+        </div>
+    </div>
+    <!-- SEARCH ANIME -->
+    <div class="container">
+        
+          <div class="search_container">
+            <div class="search_bar">
+              <input type="text" placeholder="Search any anime" id="searchAnime">
+              <button class="button-primary" id="get_anime"><img src="images/search-icon.webp"></button>
+            </div>
+          </div>
+          <!-- <h2>Search for an anime</h2> -->
+        <div id="animeTitle">
+          <div class="card">
+            <div class="card__inner"></div>
+          </div>
+        </div>
+        
+    </div>
+
+    <script>
+      function show(){
+        document.querySelector('.hamburger').classList.toggle('open')
+        document.querySelector('.navigation').classList.toggle('active')
+      }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <script src="home.js"></script>
+    <script src="carousel/carouselScript.js"></script>
+    
+    
+</body>
+</html>

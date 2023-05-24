@@ -1,0 +1,96 @@
+/* style.css */
+
+@font-face {
+  font-family: logoFont;
+  src: url(fonts/verminoriko-aki-font/VerminorikoAki-YdGj.ttf);
+}
+
+@font-face {
+  font-family: navFont;
+  src: url(fonts/PearceModernTechno/Pearce.otf);
+}
+
+*, 
+*::after, 
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --foreground: #46588C;
+  --background: #333140;
+  --red: #D92929;
+  --lightblue: #A7CFF2;
+  --whiteblue: #DFE5F2;
+  --animation-timing: 200ms ease-in-out;
+  --cursor: url('images/naruto-cursor_light.png'), auto;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+.home_div {
+  margin-top: 2rem;
+}
+
+#anime-slider {
+  width: 95vw;
+  margin: 0 auto;
+}
+
+.anime-card {
+  text-align: center;
+  width: 95vw;
+  height: 60vh;
+  background-color: var(--background);
+  transform: scale(100%);
+  transition: transform .5s ease-in-out;
+}
+
+.anime-card:hover{
+  transform: scale(110%);
+}
+
+.anime-image {
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.anime-image img {
+  height: 60vh;
+  align-items: center;
+  padding: 0 2rem 0 2rem;
+  position: static;
+}
+
+.slick-carousel {
+  background-color: white;
+}
+
+.slick-dots li button::before{
+  font-family: 'slick';
+  font-size: .5rem;
+  color: white;
+  padding: .5rem;
+}
+
+.slick-dots li.slick-active button:before{
+  color: var(--red);
+}
+/* .slick-prev {
+  position: static;
+  z-index: 2;
+}
+
+.slick-next {
+  position: static;
+  z-index: 2;
+} */

@@ -1,0 +1,256 @@
+@font-face {
+    font-family: logoFont;
+    src: url(/fonts/verminoriko-aki-font/VerminorikoAki-YdGj.ttf);
+  }
+  
+  @font-face {
+    font-family: navFont;
+    src: url(/fonts/PearceModernTechno/Pearce.otf);
+  }
+  
+  *, 
+  *::after, 
+  *::before {
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --foreground: #46588C;
+    --background: #333140;
+    --red: #D92929;
+    --lightblue: #A7CFF2;
+    --whiteblue: #DFE5F2;
+    --animation-timing: 200ms ease-in-out;
+    --cursor: url('/images/naruto-cursor_light.png'), auto;
+  }
+  
+  html {
+    cursor: var(--cursor);
+  }
+  
+  body {
+    margin: 0;
+    background-color: var(--background);
+  }
+  
+  header{
+    background: rgba(223, 229, 242,0.2);
+    width: 100%;
+    top: 0;
+    position: sticky;
+    z-index: 2;
+  }
+  
+  a {
+    text-decoration: none;
+    cursor: var(--cursor);
+  }
+  
+  h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 3rem;
+    color: var(--whiteblue);
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  /* LOGO */
+  
+  .logo {
+    padding: 1rem 0 1rem 2rem ;
+    z-index: 2;
+  }
+  
+  .logo .title {
+    font-family: logoFont;
+    font-size: 4rem;
+    color: white;
+    transition: var(--animation-timing);
+  }
+  
+  .logo .title:hover {
+    color: var(--red);
+  }
+  
+  /* HAMBURGER MENU */
+  
+  nav{
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    width: 250px;
+  }
+  
+  .navigation{
+    position: fixed;
+    right: -500px;
+    width: 350px;
+    height: 100vh;
+    background-color: var(--foreground);
+    transition: .5s;
+    z-index: 1;
+  }
+  
+  .navigation ul {
+    margin-top: 5rem;
+  }
+  
+  li a{
+    color: var(--whiteblue);
+    text-align: right;
+  }
+  
+  .navigation ul li{
+    font-family: navFont;
+    text-transform: uppercase;
+    list-style-type: none;
+    font-size: 1.8rem;
+    padding: 20px 15px;
+  }
+  
+  .navigation li a:hover{
+    color: var(--red);
+  }
+  
+  .hamburger, .bar{
+    position: fixed;
+  }
+  
+  .hamburger{
+    display: block;
+    top: 7%;
+    left: 94%;
+    width: 50px;
+    height: 50px;
+    transform: translateY(-50%);
+    border: 0;
+    background: 0 0;
+    cursor: var(--cursor);
+  }
+  
+  .bar{
+    top: 3px;
+    background: white;
+    width: 100%;
+    height: 10%;
+    border-radius: 9999px;
+    transition: all .3s ease-in;
+  }
+  
+  #bar2{
+    top: 15px;
+  }
+  
+  #bar3{
+    top: 27px;
+  }
+  
+  .navigation.active{
+    right: 0;
+  }
+  
+  .hamburger.open #bar1{
+    background-color: var(--red);
+    transform: rotate(45deg) translate(7px, 10px);
+  }
+  
+  .hamburger.open #bar2{
+    background-color: transparent;
+  }
+  
+  .hamburger.open #bar3{
+    background-color: var(--red);
+    transform: rotate(-45deg) translate(7px, -9px);
+  }
+  
+  /* SEARCH CONTAINER */
+  
+  .container {
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 5em;
+    margin-top: 0;
+  }
+  
+  /* ANIME CARD */
+  
+  .anime_img img{
+    min-height: 45vh;
+    max-height: 45vh;
+    max-width: 18vw;
+    margin-top: 1.5em;
+    /*box-shadow: 5px 5px 0px #AD8B73;*/
+    border: none;
+    border-radius: 5%;
+    box-shadow: none;
+    transition: border-width .3s ease-in-out, box-shadow .3s ease-in-out;
+  }
+  
+  .anime_img img:hover{
+    border: solid 5px #fff;
+    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  #anime-list {
+    margin: 0 2em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 14px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: space-between;
+    align-items: flex-start;
+    line-height: 1.5em;
+  }
+  
+  .get-anime h3{
+    padding: 0 1em 2em 1em;
+    text-decoration: none;
+    color: var(--lightblue);
+    transition: color .3s ease-in-out;
+  }
+  
+  .get-anime h3:hover{
+    color: var(--whiteblue);
+  }
+  
+  
+  .card {
+    margin: 100px auto 0;
+    width: 20vw;
+    height: 65vh;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transform: scale(100%);
+    transition: transform .5s ease-in-out;
+  }
+  
+  .card:hover{
+    transform: scale(110%);
+  }
+  
+  .card__inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    position: relative;
+  }
+  
+  
+  .card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(to bottom right, var(--background), var(--foreground));
+    display: block;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card__face:hover{
+    background-image: linear-gradient(to bottom right, var(--background), var(--red));
+  }
